@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+
+  <Style src="project://database/Assets/UI/HudOverlay/HudOverlay.uss" />
+
+  <ui:VisualElement name="hud-root" class="hud-root" picking-mode="Ignore">
+
+    <!-- ═══ FEATURE 1: KILL / PICKUP / CLONE FEED — between timer and pause btn ═══ -->
+    <ui:VisualElement name="feed-container" class="feed-container" picking-mode="Ignore">
+      <!-- Entries injected at runtime -->
+    </ui:VisualElement>
+
+    <!-- ═══ FEATURE 2: WEAPON ICON — top-left, between health bar and timer ═══ -->
+    <ui:VisualElement name="weapon-display" class="weapon-display" picking-mode="Ignore">
+
+      <ui:VisualElement name="weapon-icon-box" class="weapon-icon-box">
+        <ui:VisualElement name="weapon-icon-glow" class="weapon-icon-glow" />
+        <ui:Image name="weapon-icon" class="weapon-icon" />
+      </ui:VisualElement>
+
+      <!-- kept for script compatibility; hidden via USS -->
+      <ui:VisualElement class="weapon-info">
+        <ui:Label name="weapon-name" class="weapon-name" text="PISTOL" />
+        <ui:VisualElement name="ammo-row" class="ammo-row">
+          <ui:VisualElement name="ammo-bar-bg" class="ammo-bar-bg">
+            <ui:VisualElement name="ammo-bar-fill" class="ammo-bar-fill" />
+          </ui:VisualElement>
+          <ui:Label name="weapon-ammo" class="weapon-ammo" text="12/30" />
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+    </ui:VisualElement>
+
+  </ui:VisualElement>
+</ui:UXML>

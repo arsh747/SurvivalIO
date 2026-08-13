@@ -1,0 +1,108 @@
+/* ============================================================
+   DEFEND.IO — GAME COMPLETE SCREEN
+   Inherits MainMenu.uss — only adds complete-specific styles
+   ============================================================ */
+
+/* Pulse dot — gold for victory */
+.pulse-dot--complete {
+    background-color: #d4a017;
+}
+
+/* Eyebrow tag — gold */
+.eyebrow--complete {
+    color: #d4a017;
+    border-color: rgba(212, 160, 23, 0.4);
+    background-color: rgba(100, 70, 0, 0.3);
+}
+
+/* VICTORY! title */
+.complete-title {
+    color: #fff8dc;
+    -unity-font-style: bold;
+}
+
+/* Three gold stars row */
+.complete-badge-row {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.complete-badge {
+    font-size: 32px;
+    color: #d4a017;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+/* Congratulations text block */
+.congrats-text {
+    font-size: 13px;
+    color: #eaffea;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    margin-bottom: 8px;
+}
+
+.congrats-sub {
+    font-size: 11px;
+    color: #4a8a4a;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    margin-bottom: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* PLAY AGAIN — gold primary button */
+.btn-complete {
+    background-color: #7a5500;
+    border-color: #d4a017;
+    height: 56px;
+    margin-bottom: 14px;
+}
+.btn-complete:hover {
+    background-color: #9a6d00;
+    border-color: #f0c040;
+}
+.btn-complete .btn-label {
+    font-size: 16px;
+    color: #fff8dc;
+    letter-spacing: 3px;
+}
+.btn-complete .btn-arrow {
+    color: rgba(212, 160, 23, 0.8);
+}
+
+/* Gold accent reused from WinMenu */
+.accent-gold {
+    color: #d4a017;
+}
+
+/* Widen buttons */
+#btn-restart,
+#btn-menu {
+    width: 300px;
+}
+
+/* Fix text overflow in side panels */
+.side-panel {
+    overflow: hidden;
+}
+.intel-text {
+    white-space: normal;
+    overflow: hidden;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.intel-item {
+    flex-shrink: 1;
+    overflow: hidden;
+    max-width: 100%;
+}
+.run-value {
+    white-space: normal;
+    flex-shrink: 1;
+}

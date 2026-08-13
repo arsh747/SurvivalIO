@@ -1,0 +1,446 @@
+/* ============================================================
+   DEFEND.IO — MAIN MENU STYLESHEET
+   Military terminal aesthetic  |  Dark green + red CTA
+   ============================================================ */
+
+/* ---------- DESIGN TOKENS ---------- */
+:root {
+    --bg-base:       #080e08;
+    --bg-panel:      #0c160c;
+    --bg-panel-mid:  #101c10;
+    --bg-overlay:    rgba(0, 0, 0, 0.88);
+    --col-green:     #4CAF50;
+    --col-green-dim: #2e6b31;
+    --col-green-hi:  #8aff8a;
+    --col-red:       #e63c3c;
+    --col-red-dim:   #7a1e1e;
+    --col-gold:      #d4a017;
+    --col-yellow:    #f0c040;
+    --text-primary:  #c8e6c9;
+    --text-dim:      #5a805c;
+    --text-hi:       #eaffea;
+    --border-glow:   rgba(76, 175, 80, 0.35);
+    --border-dim:    rgba(76, 175, 80, 0.15);
+    --font-mono:     "Courier New", Courier, monospace;
+    --transition:    150ms ease;
+}
+
+/* ---------- ROOT ---------- */
+.root {
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #080e08;
+    font-family: "Courier New", Courier, monospace;
+    color: #c8e6c9;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ---------- SCANLINES ---------- */
+.scanlines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 20, 0, 0.06);
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.12) 3px,
+        rgba(0, 0, 0, 0.12) 4px
+    );
+}
+
+/* ---------- STATUS BAR (top & bottom) ---------- */
+.status-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #060d06;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(76, 175, 80, 0.2);
+    padding: 5px 16px;
+    height: 28px;
+}
+.footer-bar {
+    border-top-width: 1px;
+    border-top-color: rgba(76, 175, 80, 0.2);
+    border-bottom-width: 0;
+    margin-top: auto;
+}
+.status-center {
+    flex-direction: row;
+    align-items: center;
+}
+.status-text {
+    font-size: 10px;
+    color: #3a6b3c;
+    letter-spacing: 1px;
+    -unity-font-style: normal;
+}
+
+/* ---------- PULSE DOT ---------- */
+.pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    margin-right: 6px;
+}
+
+/* ---------- MAIN CONTENT ROW ---------- */
+.content {
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 20px 16px;
+}
+
+/* ---------- SIDE PANELS ---------- */
+.side-panel {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: #0c160c;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.18);
+    border-radius: 4px;
+    padding: 16px 14px;
+    flex-direction: column;
+}
+.left-panel { margin-right: 16px; }
+.right-panel { margin-left: 16px; }
+
+.panel-title {
+    font-size: 10px;
+    color: #3a6b3c;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    -unity-font-style: bold;
+}
+
+/* ---------- STAT BLOCKS ---------- */
+.stat-block {
+    margin-bottom: 18px;
+    flex-direction: column;
+}
+.stat-label {
+    font-size: 9px;
+    color: #3a6b3c;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+}
+.stat-value {
+    font-size: 22px;
+    color: #c8e6c9;
+    -unity-font-style: bold;
+    margin-bottom: 5px;
+}
+.stat-bar {
+    height: 3px;
+    background-color: rgba(76, 175, 80, 0.12);
+    border-radius: 2px;
+    overflow: hidden;
+}
+.stat-bar-fill {
+    height: 3px;
+    border-radius: 2px;
+}
+.fill-gold  { background-color: #d4a017; }
+.fill-green { background-color: #4CAF50; }
+
+/* ---------- INTEL FEED ---------- */
+.intel-divider {
+    height: 1px;
+    background-color: rgba(76, 175, 80, 0.2);
+    margin-bottom: 12px;
+}
+.intel-list { flex-direction: column; margin-bottom: 14px; }
+.intel-item {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+.intel-bullet {
+    font-size: 11px;
+    margin-right: 6px;
+    -unity-font-style: bold;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+.intel-text { font-size: 11px; color: #8ab88c; line-height: 1.6; white-space: normal; flex-shrink: 1; flex-grow: 1; }
+
+.spacer { flex-grow: 1; }
+
+/* ---------- LAST RUN ---------- */
+.run-stats { flex-direction: column; margin-top: 4px; }
+.run-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.run-label { font-size: 9px; color: #3a6b3c; letter-spacing: 1px; }
+.run-value { font-size: 9px; color: #8ab88c; }
+
+/* ---------- CENTER PANEL ---------- */
+.center-panel {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- TITLE BLOCK ---------- */
+.title-block {
+    align-items: center;
+    margin-bottom: 36px;
+}
+.eyebrow-label {
+    font-size: 10px;
+    color: #3a6b3c;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.25);
+    padding: 3px 12px;
+    border-radius: 2px;
+}
+.game-title {
+    font-size: 58px;
+    color: #eaffea;
+    -unity-font-style: bold;
+    letter-spacing: 6px;
+    margin-bottom: 8px;
+    -unity-text-align: middle-center;
+}
+.subtitle-label {
+    font-size: 10px;
+    color: #3a6b3c;
+    letter-spacing: 4px;
+    -unity-text-align: middle-center;
+}
+
+/* ---------- MENU BUTTONS ---------- */
+.menu-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 340px;
+}
+
+.menu-btn {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    height: 48px;
+    border-radius: 3px;
+    border-width: 1px;
+    background-color: #0f1f0f;
+    border-color: rgba(76, 175, 80, 0.3);
+    transition-duration: 150ms;
+    cursor: link;
+}
+.menu-btn:hover {
+    border-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+}
+.menu-btn:active {
+    scale: 0.98;
+    background-color: rgba(76, 175, 80, 0.18);
+}
+
+.btn-play {
+    background-color: #b71c1c;
+    border-color: #e63c3c;
+    height: 56px;
+    margin-bottom: 14px;
+}
+.btn-play:hover {
+    background-color: #c62828;
+    border-color: #ff5252;
+}
+
+.btn-quit {
+    background-color: transparent;
+    border-color: rgba(76, 175, 80, 0.15);
+    height: 38px;
+}
+.btn-quit .btn-label { color: #3a6b3c; font-size: 11px; }
+.btn-quit .btn-arrow { color: #3a6b3c; }
+
+.btn-label {
+    font-size: 13px;
+    color: #c8e6c9;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+}
+.btn-play .btn-label {
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+.btn-arrow {
+    font-size: 12px;
+    color: rgba(76, 175, 80, 0.6);
+}
+.btn-play .btn-arrow { color: rgba(255,255,255,0.7); }
+
+/* ---------- ACCENT COLOURS ---------- */
+.accent-green { color: #4CAF50; }
+.accent-red   { color: #e63c3c; }
+.accent-yellow{ color: #f0c040; }
+
+/* ---------- OVERLAY (shared) ---------- */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.88);
+    align-items: center;
+    justify-content: center;
+}
+.hidden { display: none; }
+
+.overlay-panel {
+    background-color: #0c160c;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.3);
+    border-radius: 4px;
+    padding: 32px 36px;
+    width: 680px;
+    max-height: 85%;
+    flex-direction: column;
+}
+.overlay-panel--narrow { width: 420px; }
+
+.overlay-title {
+    font-size: 18px;
+    color: #eaffea;
+    letter-spacing: 4px;
+    -unity-font-style: bold;
+    margin-bottom: 12px;
+    -unity-text-align: middle-center;
+}
+.overlay-divider {
+    height: 1px;
+    background-color: rgba(76, 175, 80, 0.25);
+    margin-bottom: 24px;
+}
+
+.overlay-close-btn {
+    margin-top: 28px;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 24px;
+    height: 42px;
+    border-radius: 3px;
+    background-color: #0f1f0f;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.3);
+    cursor: link;
+    min-width: 200px;
+}
+.overlay-close-btn:hover { border-color: #4CAF50; background-color: rgba(76,175,80,0.12); }
+.overlay-close-btn .btn-label { font-size: 12px; color: #c8e6c9; letter-spacing: 2px; -unity-font-style: bold; }
+
+/* ---------- HOW TO PLAY GRID ---------- */
+.htp-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.htp-card {
+    width: 47%;
+    background-color: #101c10;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.18);
+    border-radius: 3px;
+    padding: 16px;
+    margin: 0 1.5% 12px 1.5%;
+    flex-direction: column;
+}
+.htp-icon {
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 8px;
+}
+.htp-card-title {
+    font-size: 11px;
+    color: #eaffea;
+    letter-spacing: 1.5px;
+    -unity-font-style: bold;
+    margin-bottom: 6px;
+}
+.htp-card-desc {
+    font-size: 11px;
+    color: #5a805c;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+/* ---------- SETTINGS ---------- */
+.settings-section { margin-bottom: 20px; }
+.settings-section-label {
+    font-size: 9px;
+    color: #3a6b3c;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+.setting-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.setting-label {
+    font-size: 12px;
+    color: #8ab88c;
+    letter-spacing: 1px;
+}
+
+/* Toggle track */
+.toggle-track {
+    width: 44px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: #1a2e1a;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.25);
+    cursor: link;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 3px;
+}
+.toggle-track:hover { border-color: rgba(76, 175, 80, 0.5); }
+
+/* Toggle thumb — default: OFF (left) */
+.toggle-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #3a5c3a;
+    transition-duration: 150ms;
+    translate: 0 0;
+}
+/* Toggle ON — green thumb shifted right */
+.toggle-on {
+    background-color: #4CAF50;
+    translate: 22px 0;
+}
+
+/* Slider */
+.setting-slider {
+    width: 130px;
+    height: 22px;
+}
+.setting-slider > .unity-base-slider__tracker {
+    height: 3px;
+    background-color: rgba(76, 175, 80, 0.2);
+    border-radius: 2px;
+}
+.setting-slider > .unity-base-slider__dragger {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #4CAF50;
+    border-width: 0;
+    margin-top: -6px;
+}

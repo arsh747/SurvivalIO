@@ -1,0 +1,153 @@
+/* ============================================================
+   DEFEND.IO — PAUSE MENU OVERRIDES
+   Inherits all MainMenu.uss base styles
+   ============================================================ */
+
+/* Full-screen root so backdrop covers the game */
+.pause-root {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+/* Semi-transparent dark backdrop over the game */
+.pause-backdrop {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.78);
+}
+
+/* Centres the panel on screen */
+.pause-wrapper {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The floating panel */
+.pause-panel {
+    background-color: #080e08;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.35);
+    border-radius: 6px;
+    width: 780px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Top and bottom bars inside panel */
+.pause-topbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #060d06;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(76, 175, 80, 0.2);
+    padding: 5px 16px;
+    height: 28px;
+}
+.pause-bottombar {
+    border-top-width: 1px;
+    border-top-color: rgba(76, 175, 80, 0.2);
+    border-bottom-width: 0;
+    margin-top: 0;
+}
+
+/* Body row: left panel + center + right panel */
+.pause-body {
+    flex-direction: row;
+    padding: 16px;
+    flex-grow: 1;
+}
+
+/* Side panels */
+.pause-side-panel {
+    width: 160px;
+    flex-shrink: 0;
+    background-color: #0c160c;
+    border-width: 1px;
+    border-color: rgba(76, 175, 80, 0.18);
+    border-radius: 4px;
+    padding: 12px 10px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Center column */
+.pause-center {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+/* Title block — tighter than main menu since panel is smaller */
+.pause-title-block {
+    margin-bottom: 24px;
+}
+
+/* "PAUSED" title — smaller than main menu game-title */
+.pause-title {
+    font-size: 48px;
+    letter-spacing: 8px;
+    color: #eaffea;
+}
+
+/* Eyebrow tag — amber/yellow to signal caution */
+.eyebrow--pause {
+    color: #f0c040;
+    border-color: rgba(240, 192, 64, 0.35);
+    background-color: rgba(100, 80, 0, 0.25);
+}
+
+/* Pulse dot — amber on pause */
+.pulse-dot--pause {
+    background-color: #f0c040;
+}
+
+/* Buttons — same width as death/win menus */
+.pause-buttons {
+    width: 280px;
+}
+
+/* RESUME — green primary (mirror of red PLAY NOW but green) */
+.btn-resume {
+    background-color: #1b4d1b;
+    border-color: #4CAF50;
+    height: 56px;
+    margin-bottom: 14px;
+}
+.btn-resume:hover {
+    background-color: #256325;
+    border-color: #8aff8a;
+}
+.btn-resume .btn-label {
+    font-size: 16px;
+    color: #eaffea;
+    letter-spacing: 3px;
+}
+.btn-resume .btn-arrow {
+    color: rgba(76, 175, 80, 0.8);
+}
+
+/* Text overflow fix for side panels */
+.pause-side-panel {
+    overflow: hidden;
+}
+.intel-text {
+    white-space: normal;
+    overflow: hidden;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.intel-item {
+    flex-shrink: 1;
+    overflow: hidden;
+    max-width: 100%;
+}
+.run-value {
+    white-space: normal;
+    flex-shrink: 1;
+}

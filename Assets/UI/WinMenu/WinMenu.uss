@@ -1,0 +1,74 @@
+/* ============================================================
+   DEFEND.IO — WIN MENU OVERRIDES
+   Inherits all MainMenu.uss base styles
+   Only win-specific additions here
+   ============================================================ */
+
+/* Pulse dot gold on win screen */
+.pulse-dot--win {
+    background-color: #d4a017;
+}
+
+/* Eyebrow tag — gold instead of green */
+.eyebrow--win {
+    color: #d4a017;
+    border-color: rgba(212, 160, 23, 0.4);
+    background-color: rgba(100, 70, 0, 0.3);
+}
+
+/* "YOU WIN!" title — gold tint */
+.win-title {
+    color: #fff8dc;
+}
+
+/* NEXT LEVEL — gold primary button (replaces red btn-play) */
+.btn-win {
+    background-color: #7a5500;
+    border-color: #d4a017;
+    height: 56px;
+    margin-bottom: 14px;
+}
+.btn-win:hover {
+    background-color: #9a6d00;
+    border-color: #f0c040;
+}
+.btn-win .btn-label {
+    font-size: 16px;
+    color: #fff8dc;
+    letter-spacing: 3px;
+}
+.btn-win .btn-arrow {
+    color: rgba(212, 160, 23, 0.8);
+}
+
+/* Gold accent for commendation stars */
+.accent-gold {
+    color: #d4a017;
+}
+
+/* Widen buttons since only 2 exist */
+#btn-nextlvl,
+#btn-menu {
+    width: 300px;
+}
+
+/* Fix text overflow in side panels */
+.side-panel {
+    overflow: hidden;
+}
+.intel-text {
+    white-space: normal;
+    overflow: hidden;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.intel-item {
+    flex-shrink: 1;
+    overflow: hidden;
+    max-width: 100%;
+}
+.run-value {
+    white-space: normal;
+    flex-shrink: 1;
+}

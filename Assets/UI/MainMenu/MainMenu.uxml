@@ -1,0 +1,232 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+  <ui:VisualElement name="root" class="root">
+
+    <!-- SCANLINE OVERLAY -->
+    <ui:VisualElement name="scanlines" class="scanlines" picking-mode="Ignore" />
+
+    <!-- TOP STATUS BAR -->
+    <ui:VisualElement name="status-bar" class="status-bar">
+      <ui:Label name="status-left" class="status-text" text="SURVIVAL-IO // MAIN MENU" />
+      <ui:VisualElement class="status-center">
+        <ui:VisualElement name="pulse-dot" class="pulse-dot" />
+        <ui:Label class="status-text" text="SYSTEM ONLINE" />
+      </ui:VisualElement>
+      <ui:Label name="status-right" class="status-text" text="AUDIO ON  |  v0.1.0 ALPHA" />
+    </ui:VisualElement>
+
+    <!-- MAIN CONTENT AREA -->
+    <ui:VisualElement name="content" class="content">
+
+      <!-- LEFT PANEL: SURVIVAL TIPS -->
+      <ui:VisualElement name="left-panel" class="side-panel left-panel">
+
+        <ui:Label class="panel-title" text="SURVIVAL TIPS" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="intel-list">
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-green" text="▸" />
+            <ui:Label class="intel-text" text="Stay mobile — a moving target is harder to hit." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-green" text="▸" />
+            <ui:Label class="intel-text" text="Upgrade your weapon before tackling new zones." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-green" text="▸" />
+            <ui:Label class="intel-text" text="Use buildings as cover during heavy waves." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-yellow" text="!" />
+            <ui:Label class="intel-text" text="Grab health packs before your bar hits red." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-yellow" text="!" />
+            <ui:Label class="intel-text" text="Eliminate ranged enemies first to reduce incoming fire." />
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="spacer" />
+
+        <ui:Label class="panel-title" text="ZONE BRIEFING" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="run-stats">
+          <ui:VisualElement class="run-row">
+            <ui:Label class="run-label" text="ZONES" />
+            <ui:Label class="run-value accent-green" text="3 ACTIVE" />
+          </ui:VisualElement>
+          <ui:VisualElement class="run-row">
+            <ui:Label class="run-label" text="THREAT" />
+            <ui:Label class="run-value accent-red" text="ELEVATED" />
+          </ui:VisualElement>
+          <ui:VisualElement class="run-row">
+            <ui:Label class="run-label" text="ORDERS" />
+            <ui:Label class="run-value" text="CLEAR ALL" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+      </ui:VisualElement>
+
+      <!-- CENTER PANEL: TITLE + MENU — UNCHANGED -->
+      <ui:VisualElement name="center-panel" class="center-panel">
+
+        <ui:VisualElement name="title-block" class="title-block">
+          <ui:Label class="eyebrow-label" text="TACTICAL SURVIVAL" />
+          <ui:Label name="game-title" class="game-title" text="SURVIVAL.IO" />
+          <ui:Label class="subtitle-label" text="ZONE CONTROL  •  SURVIVE  •  DOMINATE" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="menu-buttons" class="menu-buttons">
+
+          <ui:Button name="btn-play" class="menu-btn btn-play">
+            <ui:Label class="btn-label" text="PLAY NOW" />
+            <ui:Label class="btn-arrow" text="▶" />
+          </ui:Button>
+
+          <ui:Button name="btn-howtoplay" class="menu-btn btn-secondary">
+            <ui:Label class="btn-label" text="HOW TO PLAY" />
+            <ui:Label class="btn-arrow" text="▶" />
+          </ui:Button>
+
+          <ui:Button name="btn-settings" class="menu-btn btn-secondary">
+            <ui:Label class="btn-label" text="SETTINGS" />
+            <ui:Label class="btn-arrow" text="▶" />
+          </ui:Button>
+
+          <ui:Button name="btn-quit" class="menu-btn btn-quit">
+            <ui:Label class="btn-label" text="QUIT" />
+            <ui:Label class="btn-arrow" text="▶" />
+          </ui:Button>
+
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- RIGHT PANEL: WEAPONS + ENEMY INTEL -->
+      <ui:VisualElement name="right-panel" class="side-panel right-panel">
+
+        <ui:Label class="panel-title" text="WEAPON ROSTER" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="intel-list">
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-green" text="▸" />
+            <ui:Label class="intel-text" text="Pistol — reliable starter, good at range." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-yellow" text="▸" />
+            <ui:Label class="intel-text" text="Shotgun — devastating up close, wide spread." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-yellow" text="▸" />
+            <ui:Label class="intel-text" text="WaveGun — experimental, melts crowds." />
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="spacer" />
+
+        <ui:Label class="panel-title" text="KNOW YOUR ENEMY" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="intel-list">
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-red" text="!" />
+            <ui:Label class="intel-text" text="Zombies chase on sight — use distance." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-red" text="!" />
+            <ui:Label class="intel-text" text="Elites hit harder — take them out fast." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-red" text="!" />
+            <ui:Label class="intel-text" text="Never let them surround you." />
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+      </ui:VisualElement>
+
+    </ui:VisualElement>
+
+    <!-- HOW TO PLAY OVERLAY — UNCHANGED -->
+    <ui:VisualElement name="overlay-howtoplay" class="overlay hidden">
+      <ui:VisualElement class="overlay-panel">
+        <ui:Label class="overlay-title" text="HOW TO PLAY" />
+        <ui:VisualElement class="overlay-divider" />
+        <ui:VisualElement class="htp-grid">
+          <ui:VisualElement class="htp-card">
+            <ui:Label class="htp-icon" text="⬡" />
+            <ui:Label class="htp-card-title" text="DEFEND YOUR ZONE" />
+            <ui:Label class="htp-card-desc" text="Protect your base from enemy waves. Each wave escalates in speed and numbers." />
+          </ui:VisualElement>
+          <ui:VisualElement class="htp-card">
+            <ui:Label class="htp-icon" text="◎" />
+            <ui:Label class="htp-card-title" text="ELIMINATE ENEMIES" />
+            <ui:Label class="htp-card-desc" text="Shoot enemies before they breach your perimeter. Headshots deal double damage." />
+          </ui:VisualElement>
+          <ui:VisualElement class="htp-card">
+            <ui:Label class="htp-icon" text="◈" />
+            <ui:Label class="htp-card-title" text="UPGRADE AND SURVIVE" />
+            <ui:Label class="htp-card-desc" text="Collect supply drops to upgrade weapons and restore health between waves." />
+          </ui:VisualElement>
+          <ui:VisualElement class="htp-card">
+            <ui:Label class="htp-icon" text="⬟" />
+            <ui:Label class="htp-card-title" text="DOMINATE THE BOARD" />
+            <ui:Label class="htp-card-desc" text="Survive all waves to post your score. Chain kills for multiplier bonuses." />
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button name="btn-close-htp" class="overlay-close-btn">
+          <ui:Label class="btn-label" text="BACK TO MENU" />
+        </ui:Button>
+      </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- SETTINGS OVERLAY — UNCHANGED -->
+    <ui:VisualElement name="overlay-settings" class="overlay hidden">
+      <ui:VisualElement class="overlay-panel overlay-panel--narrow">
+        <ui:Label class="overlay-title" text="SETTINGS" />
+        <ui:VisualElement class="overlay-divider" />
+
+        <ui:VisualElement class="settings-section">
+          <ui:Label class="settings-section-label" text="// AUDIO" />
+
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="MUSIC" />
+            <ui:VisualElement class="toggle-track" name="toggle-music">
+              <ui:VisualElement class="toggle-thumb" name="thumb-music" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="SFX SOUNDS" />
+            <ui:VisualElement class="toggle-track" name="toggle-sfx">
+              <ui:VisualElement class="toggle-thumb" name="thumb-sfx" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="MASTER VOLUME" />
+            <ui:Slider name="slider-volume" class="setting-slider" low-value="0" high-value="100" value="80" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="settings-section">
+          <ui:Label class="settings-section-label" text="// DISPLAY" />
+
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="SCREENSHAKE" />
+            <ui:VisualElement class="toggle-track" name="toggle-shake">
+              <ui:VisualElement class="toggle-thumb toggle-on" name="thumb-shake" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:Button name="btn-close-settings" class="overlay-close-btn">
+          <ui:Label class="btn-label" text="SAVE AND BACK" />
+        </ui:Button>
+      </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- BOTTOM STATUS BAR — UNCHANGED -->
+    <ui:VisualElement name="footer-bar" class="status-bar footer-bar">
+      <ui:Label class="status-text" text="▸ SYSTEM ONLINE" />
+      <ui:Label class="status-text" text="LANDSCAPE MODE" />
+    </ui:VisualElement>
+
+  </ui:VisualElement>
+</ui:UXML>

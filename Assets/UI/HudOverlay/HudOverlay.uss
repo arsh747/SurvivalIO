@@ -1,0 +1,127 @@
+/* ============================================================
+   DEFEND.IO — HUD OVERLAY v3
+   Kill Feed (top-right area) + Weapon Circle (below health bar)
+   ============================================================ */
+
+.hud-root {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+/* ───────────────────────────────────────────
+   FEATURE 1 — KILL / EVENT FEED
+   Moved further left, taller entries, narrower width
+   ─────────────────────────────────────────── */
+
+.feed-container {
+    position: absolute;
+    top: 12px;
+    right: 200px;        /* further left, well clear of pause button */
+    width: 220px;        /* narrower */
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.feed-entry {
+    background-color: rgba(6, 12, 6, 0.88);
+    border-left-width: 3px;
+    border-left-color: #4CAF50;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 10px 12px 10px 10px;   /* taller padding */
+    margin-bottom: 6px;
+    width: 100%;
+    font-size: 14px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+    white-space: normal;
+    opacity: 1;
+    translate: 0px 0px;
+    transition-property: opacity, translate;
+    transition-duration: 0.25s, 0.25s;
+}
+
+.feed-entry--kill   { border-left-color: #e63c3c; }
+.feed-entry--pickup { border-left-color: #d4a017; }
+.feed-entry--event  { border-left-color: #4CAF50; }
+
+.feed-entry--enter {
+    opacity: 0;
+    translate: 50px 0px;
+}
+.feed-entry--exit {
+    opacity: 0;
+}
+
+.feed-text-white { color: #c8e6c9; }
+
+/* ───────────────────────────────────────────
+   FEATURE 2 — WEAPON CIRCLE
+   Just the circle — no text card, no name label
+   Positioned below the health bar, same left edge
+   ─────────────────────────────────────────── */
+
+.weapon-display {
+    position: absolute;
+    top: 80px;           /* below health bar with a small gap */
+    left: 10px;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+    width: auto;
+}
+
+/* The circle — larger than before */
+.weapon-icon-box {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-width: 2px;
+    border-color: rgba(76, 175, 80, 0.7);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.weapon-icon-glow {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(76, 175, 80, 0);
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+/* Weapon sprite fills the circle */
+.weapon-icon {
+    width: 46px;
+    height: 46px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+/* Hide the text panel entirely — circle only */
+.weapon-info {
+    display: none;
+}
+
+.weapon-name  { display: none; }
+.ammo-row     { display: none; }
+.ammo-bar-bg  { display: none; }
+.ammo-bar-fill{ display: none; }
+.weapon-ammo  { display: none; }
+
+/* Glow swap animation */
+.weapon-display--swap .weapon-icon-glow {
+    background-color: rgba(76, 175, 80, 0.4);
+}
+.weapon-display--swap .weapon-icon-box {
+    border-color: #8aff8a;
+}

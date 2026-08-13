@@ -1,0 +1,182 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+
+  <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss" />
+  <Style src="project://database/Assets/UI/PauseMenu/PauseMenu.uss" />
+
+  <ui:VisualElement name="root" class="root pause-root">
+
+    <ui:VisualElement name="scanlines" class="scanlines" picking-mode="Ignore" />
+
+    <!-- DARK BACKDROP -->
+    <ui:VisualElement name="backdrop" class="pause-backdrop" picking-mode="Ignore" />
+
+    <!-- CENTERED PAUSE PANEL -->
+    <ui:VisualElement name="pause-wrapper" class="pause-wrapper">
+      <ui:VisualElement name="pause-panel" class="pause-panel">
+
+        <!-- TOP BAR -->
+        <ui:VisualElement class="pause-topbar">
+          <ui:Label class="status-text pause-topbar-left" text="SURVIVAL-IO // PAUSED" />
+          <ui:VisualElement class="status-center">
+            <ui:VisualElement name="pulse-dot" class="pulse-dot pulse-dot--pause" />
+            <ui:Label class="status-text" text="SESSION SUSPENDED" />
+          </ui:VisualElement>
+          <ui:Label class="status-text" text="AUDIO ON  |  v0.1.0 ALPHA" />
+        </ui:VisualElement>
+
+        <!-- MAIN BODY -->
+        <ui:VisualElement class="pause-body">
+
+          <!-- LEFT: QUICK INTEL -->
+          <ui:VisualElement class="pause-side-panel">
+            <ui:Label class="panel-title" text="FIELD NOTES" />
+            <ui:VisualElement class="intel-divider" />
+            <ui:VisualElement class="intel-list">
+              <ui:VisualElement class="intel-item">
+                <ui:Label class="intel-bullet accent-green" text="▸" />
+                <ui:Label class="intel-text" text="Stay mobile between engagements." />
+              </ui:VisualElement>
+              <ui:VisualElement class="intel-item">
+                <ui:Label class="intel-bullet accent-green" text="▸" />
+                <ui:Label class="intel-text" text="Prioritise ranged enemies first." />
+              </ui:VisualElement>
+              <ui:VisualElement class="intel-item">
+                <ui:Label class="intel-bullet accent-yellow" text="!" />
+                <ui:Label class="intel-text" text="Check health before re-engaging." />
+              </ui:VisualElement>
+              <ui:VisualElement class="intel-item">
+                <ui:Label class="intel-bullet accent-yellow" text="!" />
+                <ui:Label class="intel-text" text="Use cover — buildings block fire." />
+              </ui:VisualElement>
+            </ui:VisualElement>
+          </ui:VisualElement>
+
+          <!-- CENTER: TITLE + BUTTONS -->
+          <ui:VisualElement name="pause-center" class="pause-center">
+
+            <ui:VisualElement class="title-block pause-title-block">
+              <ui:Label class="eyebrow-label eyebrow--pause" text="// GAME PAUSED //" />
+              <ui:Label class="game-title pause-title" text="PAUSED" />
+              <ui:Label class="subtitle-label" text="MISSION IN PROGRESS  •  STAND BY" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="menu-buttons pause-buttons">
+
+              <ui:Button name="btn-resume" class="menu-btn btn-resume">
+                <ui:Label class="btn-label" text="RESUME" />
+                <ui:Label class="btn-arrow" text="▶" />
+              </ui:Button>
+
+              <ui:Button name="btn-restart" class="menu-btn">
+                <ui:Label class="btn-label" text="RESTART" />
+                <ui:Label class="btn-arrow" text="▶" />
+              </ui:Button>
+
+              <ui:Button name="btn-settings" class="menu-btn">
+                <ui:Label class="btn-label" text="SETTINGS" />
+                <ui:Label class="btn-arrow" text="▶" />
+              </ui:Button>
+
+              <ui:Button name="btn-mainmenu" class="menu-btn btn-quit">
+                <ui:Label class="btn-label" text="MAIN MENU" />
+                <ui:Label class="btn-arrow" text="▶" />
+              </ui:Button>
+
+            </ui:VisualElement>
+          </ui:VisualElement>
+
+          <!-- RIGHT: STATUS -->
+          <ui:VisualElement class="pause-side-panel">
+            <ui:Label class="panel-title" text="INTEL FEED" />
+            <ui:VisualElement class="intel-divider" />
+            <ui:VisualElement class="intel-list">
+              <ui:VisualElement class="intel-item">
+                <ui:Label class="intel-bullet accent-red" text="▸" />
+                <ui:Label class="intel-text" text="Enemy active Zone 3" />
+              </ui:VisualElement>
+              <ui:VisualElement class="intel-item">
+                <ui:Label class="intel-bullet accent-yellow" text="▸" />
+                <ui:Label class="intel-text" text="Perimeter breach near Bldg 5" />
+              </ui:VisualElement>
+              <ui:VisualElement class="intel-item">
+                <ui:Label class="intel-bullet accent-red" text="▸" />
+                <ui:Label class="intel-text" text="Low health — resupply!" />
+              </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="spacer" />
+
+            <ui:Label class="panel-title" text="SESSION" />
+            <ui:VisualElement class="intel-divider" />
+            <ui:VisualElement class="run-stats">
+              <ui:VisualElement class="run-row">
+                <ui:Label class="run-label" text="STATUS" />
+                <ui:Label class="run-value accent-yellow" text="SUSPENDED" />
+              </ui:VisualElement>
+              <ui:VisualElement class="run-row">
+                <ui:Label class="run-label" text="ZONE" />
+                <ui:Label class="run-value" text="ACTIVE" />
+              </ui:VisualElement>
+              <ui:VisualElement class="run-row">
+                <ui:Label class="run-label" text="OPERATOR" />
+                <ui:Label class="run-value accent-green" text="STANDING BY" />
+              </ui:VisualElement>
+            </ui:VisualElement>
+          </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <!-- BOTTOM BAR -->
+        <ui:VisualElement class="pause-topbar pause-bottombar">
+          <ui:Label class="status-text" text="▸ SYSTEM ONLINE" />
+          <ui:Label class="status-text" text="PRESS ESC TO RESUME" />
+          <ui:Label class="status-text" text="LANDSCAPE MODE" />
+        </ui:VisualElement>
+
+      </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- SETTINGS OVERLAY -->
+    <ui:VisualElement name="overlay-settings" class="overlay hidden">
+      <ui:VisualElement class="overlay-panel overlay-panel--narrow">
+        <ui:Label class="overlay-title" text="SETTINGS" />
+        <ui:VisualElement class="overlay-divider" />
+
+        <ui:VisualElement class="settings-section">
+          <ui:Label class="settings-section-label" text="// AUDIO" />
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="MUSIC" />
+            <ui:VisualElement class="toggle-track" name="toggle-music">
+              <ui:VisualElement class="toggle-thumb" name="thumb-music" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="SFX SOUNDS" />
+            <ui:VisualElement class="toggle-track" name="toggle-sfx">
+              <ui:VisualElement class="toggle-thumb" name="thumb-sfx" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="MASTER VOLUME" />
+            <ui:Slider name="slider-volume" class="setting-slider" low-value="0" high-value="100" value="80" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="settings-section">
+          <ui:Label class="settings-section-label" text="// DISPLAY" />
+          <ui:VisualElement class="setting-row">
+            <ui:Label class="setting-label" text="SCREENSHAKE" />
+            <ui:VisualElement class="toggle-track" name="toggle-shake">
+              <ui:VisualElement class="toggle-thumb toggle-on" name="thumb-shake" />
+            </ui:VisualElement>
+          </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:Button name="btn-close-settings" class="overlay-close-btn">
+          <ui:Label class="btn-label" text="SAVE AND BACK" />
+        </ui:Button>
+      </ui:VisualElement>
+    </ui:VisualElement>
+
+  </ui:VisualElement>
+</ui:UXML>

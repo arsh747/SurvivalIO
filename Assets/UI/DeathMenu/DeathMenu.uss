@@ -1,0 +1,62 @@
+/* ============================================================
+   DEFEND.IO — DEATH MENU OVERRIDES
+   ============================================================ */
+
+/* Pulse dot red on death */
+.pulse-dot--dead {
+    background-color: #e63c3c;
+}
+
+/* Eyebrow tag red */
+.eyebrow--dead {
+    color: #e63c3c;
+    border-color: rgba(230, 60, 60, 0.35);
+    background-color: rgba(120, 20, 20, 0.3);
+}
+
+/* Widen buttons */
+#btn-retry,
+#btn-menu {
+    width: 300px;
+}
+
+/* Title block spacing */
+#title-block {
+    margin-bottom: 28px;
+}
+
+/* ── FIX: stop text overflowing side panels ── */
+.side-panel {
+    overflow: hidden;
+}
+
+.intel-text {
+    white-space: normal;
+    overflow: hidden;
+    -unity-text-overflow-position: end;
+    text-overflow: clip;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.intel-item {
+    flex-shrink: 1;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.run-value {
+    white-space: normal;
+    flex-shrink: 1;
+    -unity-text-align: middle-right;
+}
+
+.run-label {
+    flex-shrink: 0;
+}
+
+.panel-title {
+    white-space: normal;
+    overflow: hidden;
+}

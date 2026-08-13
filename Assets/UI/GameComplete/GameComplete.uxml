@@ -1,0 +1,137 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+
+  <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss" />
+  <Style src="project://database/Assets/UI/GameComplete/GameComplete.uss" />
+
+  <ui:VisualElement name="root" class="root">
+
+    <ui:VisualElement name="scanlines" class="scanlines" picking-mode="Ignore" />
+
+    <!-- TOP STATUS BAR -->
+    <ui:VisualElement name="status-bar" class="status-bar">
+      <ui:Label class="status-text" text="SURVIVAL-IO // CAMPAIGN COMPLETE" />
+      <ui:VisualElement class="status-center">
+        <ui:VisualElement name="pulse-dot" class="pulse-dot pulse-dot--complete" />
+        <ui:Label class="status-text" text="ALL ZONES CLEARED" />
+      </ui:VisualElement>
+      <ui:Label class="status-text" text="AUDIO ON  |  v0.1.0 ALPHA" />
+    </ui:VisualElement>
+
+    <!-- MAIN CONTENT -->
+    <ui:VisualElement name="content" class="content">
+
+      <!-- LEFT PANEL -->
+      <ui:VisualElement name="left-panel" class="side-panel left-panel">
+        <ui:Label class="panel-title" text="CAMPAIGN LOG" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="intel-list">
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-gold" text="★" />
+            <ui:Label class="intel-text" text="Zone 1 — Cleared" />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-gold" text="★" />
+            <ui:Label class="intel-text" text="Zone 2 — Cleared" />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-gold" text="★" />
+            <ui:Label class="intel-text" text="Zone 3 — Cleared" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="spacer" />
+        <ui:Label class="panel-title" text="OPERATOR RANK" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="run-stats">
+          <ui:VisualElement class="run-row">
+            <ui:Label class="run-label" text="RATING" />
+            <ui:Label class="run-value accent-gold" text="ELITE" />
+          </ui:VisualElement>
+          <ui:VisualElement class="run-row">
+            <ui:Label class="run-label" text="ZONES" />
+            <ui:Label class="run-value accent-green" text="3 / 3" />
+          </ui:VisualElement>
+          <ui:VisualElement class="run-row">
+            <ui:Label class="run-label" text="STATUS" />
+            <ui:Label class="run-value accent-green" text="VICTORIOUS" />
+          </ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- CENTER PANEL -->
+      <ui:VisualElement name="center-panel" class="center-panel">
+        <ui:VisualElement name="title-block" class="title-block">
+          <ui:Label class="eyebrow-label eyebrow--complete" text="✦ CAMPAIGN COMPLETE ✦" />
+          <ui:Label name="complete-title" class="game-title complete-title" text="VICTORY!" />
+          <ui:Label class="subtitle-label" text="ALL ZONES SECURED  •  MISSION ACCOMPLISHED" />
+        </ui:VisualElement>
+        <ui:VisualElement class="complete-badge-row">
+          <ui:Label class="complete-badge" text="★" />
+          <ui:Label class="complete-badge" text="★" />
+          <ui:Label class="complete-badge" text="★" />
+        </ui:VisualElement>
+        <ui:Label class="congrats-text" text="CONGRATULATIONS, OPERATOR." />
+        <ui:Label class="congrats-sub" text="You have completed the campaign and cleared all three zones. The sector is secure." />
+        <ui:VisualElement name="menu-buttons" class="menu-buttons">
+          <ui:Button name="btn-restart" class="menu-btn btn-complete">
+            <ui:Label class="btn-label" text="PLAY AGAIN" />
+            <ui:Label class="btn-arrow" text="▶" />
+          </ui:Button>
+          <ui:Button name="btn-menu" class="menu-btn">
+            <ui:Label class="btn-label" text="MAIN MENU" />
+            <ui:Label class="btn-arrow" text="▶" />
+          </ui:Button>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+      <!-- RIGHT PANEL -->
+      <ui:VisualElement name="right-panel" class="side-panel right-panel">
+        <ui:Label class="panel-title" text="COMMENDATIONS" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="intel-list">
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-gold" text="★" />
+            <ui:Label class="intel-text" text="Campaign Finisher — all 3 zones cleared." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-gold" text="★" />
+            <ui:Label class="intel-text" text="Zone Dominator — no zone left standing." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-green" text="▸" />
+            <ui:Label class="intel-text" text="Survivor — made it to the end." />
+          </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="spacer" />
+        <ui:Label class="panel-title" text="INTEL FEED" />
+        <ui:VisualElement class="intel-divider" />
+        <ui:VisualElement class="intel-list">
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-green" text="▸" />
+            <ui:Label class="intel-text" text="All hostile units neutralised." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-green" text="▸" />
+            <ui:Label class="intel-text" text="Sector secured — command is proud." />
+          </ui:VisualElement>
+          <ui:VisualElement class="intel-item">
+            <ui:Label class="intel-bullet accent-yellow" text="▸" />
+            <ui:Label class="intel-text" text="Debrief scheduled at HQ." />
+          </ui:VisualElement>
+        </ui:VisualElement>
+      </ui:VisualElement>
+
+    </ui:VisualElement>
+
+    <!-- BOTTOM BAR -->
+    <ui:VisualElement name="footer-bar" class="status-bar footer-bar">
+      <ui:Label class="status-text" text="▸ CAMPAIGN COMPLETE" />
+      <ui:Label class="status-text" text="LANDSCAPE MODE" />
+    </ui:VisualElement>
+
+  </ui:VisualElement>
+</ui:UXML>
