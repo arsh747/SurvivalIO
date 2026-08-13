@@ -1,6 +1,6 @@
 # Survival.io
 
-Part of the **MetaPlay: A Multi Game Offline Platform** — a fast-paced survival game focused on reflexes, resource management, and level progression.
+A fast-paced Unity survival game focused on reflexes, resource management, and level progression.
 
 ## Description
 A survival-style game where enemies spawn through a scripted spawn system (no AI pathing — this game does not use AI). The player must survive for a set amount of time; once the survival timer completes, a portal opens that takes the player to the next level.
@@ -23,12 +23,12 @@ A survival-style game where enemies spawn through a scripted spawn system (no AI
 3. Add this folder as a project
 4. Open the main scene and press Play
 
-## Testing Notes (from FYP documentation)
+## Testing Notes
 - Verified: hunger bar decreases steadily when player is idle
 - Verified: player takes damage over time once hunger reaches zero
 
 ## Status
-Completed — part of MetaPlay FYP (Fall 2025 – Spring 2026)
+Completed
 
-## Credits
-Syed Kazim Raza, M. Arshmaan Attique, Hamza Javed — BS Computer Science, University of Management and Technology, Lahore
+---
+*Built with Unity — actively maintained and improved.*
